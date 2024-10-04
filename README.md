@@ -12,7 +12,7 @@ composer require starfruit/maintenance-bundle
 ```bash
 return [
     ....
-    Starfruit\MaintenanceBundle\StarfruitBuilderBundle::class => ['all' => true],
+    Starfruit\MaintenanceBundle\StarfruitMaintenanceBundle::class => ['all' => true],
 ];
 ```
 
