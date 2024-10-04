@@ -2,7 +2,6 @@
 
 namespace Starfruit\MaintenanceBundle\Cleanup;
 
-use Symfony\Component\Process\Process;
 use Pimcore\Db;
 use Carbon\Carbon;
 
@@ -27,9 +26,7 @@ class RecycleBinCleanup implements ServiceCleanupInterface
 
     private function cleanupFiles($maxDays)
     {
-        $process = new Process(explode(' ', 'php '. str_replace("\\", '/', PIMCORE_PROJECT_ROOT) .'/bin/console pimcore:recyclebin:cleanup --older-than-days=' . $maxDays), null, null, null, 900);
-
-        $process->run();
+        BaseCleanup::runCommandLine('pimcore:recyclebin:cleanup --older-than-days=' . $maxDays);
     }
 
     private function cleanupDatabase($maxDays)
