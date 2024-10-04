@@ -9,5 +9,3 @@ starfruit_maintenance:
             max_days: 30
         temporary_file:
             enable: true
-        version:
-            enable: true
