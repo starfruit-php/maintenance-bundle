@@ -1,0 +1,3 @@
+starfruit_maintenance_default:
+    resource: "@StarfruitMaintenanceBundle/src/Controller/*"
+    type: annotation

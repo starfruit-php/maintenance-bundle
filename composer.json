@@ -1,0 +1,26 @@
+{
+  "name":"starfruit/maintenance-bundle",
+  "description":"Starfruit Maintenance Bundle",
+  "keywords":[
+    "starfruit", "maintenance", "cleanup", "version", "log", "log data", "cache", "output cache",
+    "temporary file", "recycle bin", "optimize"
+  ],
+  "homepage":"https://github.com/starfruit-php/maintenance-bundle",
+  "license":"MIT",
+  "authors":[
+    {
+      "name":"Nguyen Hoang Anh",
+      "email":"anhnh@starfruit.com.vn",
+      "role":"Developer"
+    }
+  ],
+  "require": {
+  },
+  "suggest":{
+  },
+  "autoload": {
+    "psr-4": {
+      "Starfruit\\MaintenanceBundle\\": "src/"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+imports:
+    - { resource: starfruit_maintenance.yaml }
+
+monolog:
+    handlers:
+        main:
+            type: rotating_file
+            path: "%kernel.logs_dir%/%kernel.environment%/log.log"
+            max_files: 30

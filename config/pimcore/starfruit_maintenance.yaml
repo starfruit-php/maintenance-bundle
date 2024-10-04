@@ -1,0 +1,13 @@
+starfruit_maintenance:
+    cleanup_services:
+        log_data:
+            enable: true
+        output_cache:
+            enable: true
+        recycle_bin:
+            enable: true
+            max_days: 30
+        temporary_file:
+            enable: true
+        version:
+            enable: true
