@@ -56,7 +56,7 @@ files = /path-to-file/supervisord.conf
 
 ## Start
 
-S
+Run command lines with root permission:
 
 ```bash
 sudo supervisorctl reread
@@ -64,8 +64,10 @@ sudo supervisorctl update
 
 sudo supervisorctl start messenger-consume:*
 sudo supervisorctl start maintenance:*
+sudo supervisorctl start stf-maintenance:*
 
 # If you deploy an update of your code, don't forget to restart your workers to run the new code
 sudo supervisorctl restart messenger-consume:*
 sudo supervisorctl restart maintenance:*
+sudo supervisorctl restart stf-maintenance:*
 ```
