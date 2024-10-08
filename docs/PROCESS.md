@@ -4,7 +4,7 @@ Setup and start maintenance process
 # Setup with Supervisord
 
 ## Create `supervisord.conf` file with example content:
-*(Please replace `path-to-project-root` and `path-to-file`)*
+*(Please replace `path-to-project-root`, `path-to-file` and [current-server-user])*
 
 ```bash
 [program:messenger-consume]
@@ -17,7 +17,7 @@ process_name=%(program_name)s_%(process_num)02d
 stdout_logfile=/var/log/pimcore.log
 stdout_logfile_maxbytes=0
 redirect_stderr=true
-user=root
+user=[current-server-user]
 
 [program:maintenance]
 command=sudo bash -c 'sleep 3600 && exec php /path-to-project-root/bin/console pimcore:maintenance'
@@ -26,7 +26,7 @@ autorestart=true
 stdout_logfile=/var/log/pimcore.log
 stdout_logfile_maxbytes=0
 redirect_stderr=true
-user=root
+user=[current-server-user]
 
 [program:stf-maintenance]
 command=sudo bash -c 'sleep 86400 && exec php /path-to-project-root/bin/console stf:maintenance:cleanup'
@@ -35,7 +35,7 @@ autorestart=true
 stdout_logfile=/var/log/pimcore.log
 stdout_logfile_maxbytes=0
 redirect_stderr=true
-user=root
+user=[current-server-user]
 ```
 
 ## Install
